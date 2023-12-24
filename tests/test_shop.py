@@ -68,3 +68,7 @@ class TestCart:
         cart.add_product(product, buy_count=20000)
         buy = cart.buy(product)
         assert f'Вы можете купить только {product.quantity} ед. продукта' in buy
+
+    def test_clear(self, cart, product):
+        cart.add_product(product, 20)
+        cart.clear()
